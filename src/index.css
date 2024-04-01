@@ -1,0 +1,107 @@
+.listItems{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;    
+}
+.cardImage{
+    object-fit: cover;
+    width: 180px;
+    height: 250px;
+    border-radius: 10px;  
+    transition: transform 250ms; 
+    box-shadow:5px 4px 30px .5px rgba(255, 255, 255, 0.338);
+    
+}
+.cardImage:hover{
+    transform: rotate(3deg) scale(1.1);
+    transition-timing-function: ease-in;
+    
+}
+
+.page{
+    display: flex;
+    justify-content: center;
+}
+.mainPage{
+    display: grid;
+    grid-template-columns: 10fr 1.5fr;
+    color: white;
+    min-height: 100vh;
+}
+h1{
+    text-align: center;
+}
+.card{
+   background-image: url("memory-card/src/assets/bg.jpg");
+}
+.front{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: .5s;
+    cursor: pointer;
+    transform: perspective(1000px) rotateY(var(--rotate-y, 0))
+        translateY(var(--translate-y,0));
+
+}
+.card:hover{
+    --translate-y: -2px;
+    opacity: 1;
+
+} 
+.card.flip{
+    --rotate-y: 180deg;
+}
+.card.front{
+    left:0
+}
+.card.front,
+.card.back{
+    position: absolute;
+    padding: 1rem;
+    backface-visibility: hidden;
+}
+.card .back{
+    transform: rotateY(180deg);
+
+}
+#scr{
+    transform: translateY(380%);
+}
+#bgg{
+ position: absolute;
+ z-index: -1;
+ height: 300px;
+ width: 230px;
+}
+#bgg:hover{
+    transform: none;
+}
+#root{
+    height: 100vh;
+}
+#obg{
+    position: absolute;
+    width: 100%;
+    min-height: 200vh;
+    z-index: -1;
+    object-fit: cover;
+}
+#title{
+    transform: rotate(-19deg) translateX(-15%);
+}
+.scoreCard{
+    color: red;
+    transform: translateY(20%);
+}
+#bubble{
+    position: absolute;
+    transform: translateX(-40%);
+
+    z-index: -1;
+}
