@@ -10,7 +10,7 @@ function ScoreBoard(props){
             <h3 id="scr">Score :{props.score}</h3>
             <h3 id="scr">Best Score: {props.best}</h3>
             </div>
-            <h3>Status :{props.status}</h3>
+            <h3 id="sts">Status :{props.status}</h3>
         </div>
     )
 }

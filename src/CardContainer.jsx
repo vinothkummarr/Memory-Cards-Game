@@ -32,9 +32,7 @@ function CardContainer(){
     
     return(
         <div className='mainPage'>
-            <video autoPlay muted loop id='obg'>
-                <source src='src\video.mp4' type='video/mp4'/>
-            </video>
+           <img src="src\video2.gif" id='obg' alt="" />
             <Cards cards ={image} SetScore ={SetScore} score={score} SetStatus={SetStatus} best={best} SetBest ={SetBest} SetImageCount={SetImageCount}></Cards>
             <ScoreBoard score ={score} status={status} best ={best} imageCount={imageCount} SetImageCount={SetImageCount}></ScoreBoard>
         </div>
