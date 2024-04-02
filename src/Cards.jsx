@@ -8,7 +8,7 @@ function Cards(props){
         const found = counter.find((ele => ele === e.target.id))
         if(found){
             console.log('thothutey irukiye daw')
-            props.SetStatus('Thothutey irukiye Da')
+            props.SetStatus('You Lose')
             if(props.best < props.score){
                 props.SetBest(props.score)
             }
@@ -22,7 +22,7 @@ function Cards(props){
                 e.target.id
             ]),
             props.SetScore(props.score+1)
-           
+            
         }
     }
     console.log(counter)
@@ -43,7 +43,9 @@ function Cards(props){
                 <img id="title" src="src\title.png" alt="" width="500px"/>
             <div className="page">
                 <ul className="listItems">{listItems}</ul>
-            </div></div>
+            </div>
+            <h3 id="stss">{props.status}</h3>
+            </div>
         )
 }
 export default Cards

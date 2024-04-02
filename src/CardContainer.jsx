@@ -5,7 +5,7 @@ import ScoreBoard from './ScoreBoard'
 function CardContainer(){
     const [image, setImage]= useState([])
     const [score, SetScore] = useState(0)
-    const [status, SetStatus] =useState('')
+    const [status, SetStatus] =useState('Start')
     const [best, SetBest]= useState(0)
     const [imageCount, SetImageCount] = useState(4)
     const client =createClient("ppPmVqAxif9xj1rlh5CdkzRjE0a6h5yYlAgO6tZPYBU6pyXMAZ5Xrazu")
@@ -32,9 +32,10 @@ function CardContainer(){
     
     return(
         <div className='mainPage'>
-           <img src="src\video2.gif" id='obg' alt="" />
-            <Cards cards ={image} SetScore ={SetScore} score={score} SetStatus={SetStatus} best={best} SetBest ={SetBest} SetImageCount={SetImageCount}></Cards>
+           <img src="src\bggpic.jpg" id='obg' alt="" />
+            <Cards cards ={image} SetScore ={SetScore} score={score} SetStatus={SetStatus} best={best} SetBest ={SetBest} SetImageCount={SetImageCount} status={status}></Cards>
             <ScoreBoard score ={score} status={status} best ={best} imageCount={imageCount} SetImageCount={SetImageCount}></ScoreBoard>
+            <h3 id="sts">Status :{status}</h3>
         </div>
     )
 }

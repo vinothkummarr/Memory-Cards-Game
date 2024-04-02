@@ -11,7 +11,7 @@
     height: 250px;
     border-radius: 10px;  
     transition: transform 250ms; 
-    box-shadow:5px 4px 30px .5px rgba(255, 255, 255, 0.338);
+    box-shadow:5px 4px 30px .5px rgba(255, 255, 255, 0.453);
     
 }
 .cardImage:hover{
@@ -90,10 +90,11 @@ h1{
     width: 100%;
     min-height: 100vh;
     z-index: -1;
-    
+    opacity: 0.9;
 }
 #title{
     transform: rotate(-19deg) translateX(-15%);
+    box-shadow:5px 4px 30px .5px rgba(255, 255, 255, 0.453);
 }
 .scoreCard{
     color: red;
@@ -107,4 +108,17 @@ h1{
 }
 #sts{
     transform: translateY(50%);
+}
+#stss{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    background-color: black;
+    margin: 10% 43%;
+    height: 10%;
+    border-radius: 10px;
+    transform: translateX(35%);
+    box-shadow:5px 4px 30px .5px rgba(255, 255, 255, 0.453);
 }
